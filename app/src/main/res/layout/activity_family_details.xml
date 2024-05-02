@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck"
+    android:fillViewport="true"
+    tools:viewBindingIgnore="true" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NewFormEntry">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:stateListAnimator="@android:anim/bounce_interpolator"
+        android:text="@string/family_details"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:textColor="#FEFAE0"
+        android:textColorHint="#FEFAE0"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/fName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/f_enter_name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:importantForAutofill="no" />
+
+
+    <EditText
+        android:textColor="#FEFAE0"
+        android:textColorHint="#FEFAE0"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/fAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/enter_age"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/fName"
+        app:layout_constraintStart_toStartOf="@+id/fName"
+        app:layout_constraintTop_toBottomOf="@+id/fName"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:textColor="#FEFAE0"
+        android:textColorHint="#FEFAE0"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/fGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/enter_gender"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/fAge"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/fAge"
+        app:layout_constraintTop_toBottomOf="@+id/fAge"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:textColor="#FEFAE0"
+        android:textColorHint="#FEFAE0"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/fRelation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/enter_relation"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/fGender"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fGender"
+        app:layout_constraintTop_toBottomOf="@+id/fGender"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:textColor="#FEFAE0"
+        android:textColorHint="#FEFAE0"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/fAddharNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_addhar_number"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/fRelation"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/fRelation"
+        app:layout_constraintTop_toBottomOf="@+id/fRelation" />
+
+    <EditText
+        android:textColor="#FEFAE0"
+        android:textColorHint="#FEFAE0"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/fMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/enter_mobie_number"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/fAddharNumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fAddharNumber"
+        app:layout_constraintTop_toBottomOf="@+id/fAddharNumber"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:background="@drawable/button_background"
+
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:theme="@style/Theme.MyApplication"
+        android:id="@+id/FsaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/save_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fMobileNumber"
+        app:layout_constraintStart_toStartOf="@+id/fMobileNumber"
+        app:layout_constraintTop_toBottomOf="@+id/fMobileNumber"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="OnClick,VisualLintBounds" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

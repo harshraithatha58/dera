@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck"
+    android:fillViewport="true"
+    tools:viewBindingIgnore="true" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NewFormEntry">
+
+
+        <ImageView
+            android:id="@+id/imgViewer"
+            android:layout_width="132dp"
+            android:layout_height="156dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="40dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toStartOf="@+id/btnCamera"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <Button
+
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="56dp"
+            android:text="@string/upload_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/identification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:ems="10"
+            android:hint="@string/enter_Id"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/btnCamera"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="@+id/imgViewer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_name"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/identification"
+            app:layout_constraintTop_toBottomOf="@+id/identification"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/fathersName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_father_s_name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_address"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/fathersName"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/fathersName"
+            app:layout_constraintTop_toBottomOf="@+id/fathersName"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/religion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_religion"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/address"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/address"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/maritialStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/maretial_status"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/religion"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/religion"
+            app:layout_constraintTop_toBottomOf="@+id/religion"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/mobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_mobile_number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/maritialStatus"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/maritialStatus"
+            app:layout_constraintTop_toBottomOf="@+id/maritialStatus"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_designation"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/mobileNumber"
+            app:layout_constraintStart_toStartOf="@+id/mobileNumber"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumber"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/in_days_specify_duration"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/designation"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/designation"
+            app:layout_constraintTop_toBottomOf="@+id/designation"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/routeUsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/route_used"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/duration"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/duration"
+            app:layout_constraintTop_toBottomOf="@+id/duration"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:textColor="#FEFAE0"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/placeVisitedLastYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/place_visited_last_year"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/routeUsed"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/routeUsed"
+            app:layout_constraintTop_toBottomOf="@+id/routeUsed"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/placeVisitedLastYear"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="@+id/placeVisitedLastYear"
+            app:layout_constraintTop_toBottomOf="@+id/placeVisitedLastYear" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

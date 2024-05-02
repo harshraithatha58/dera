@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView2" type="id" />
+    <item name="fName" type="id" />
+    <item name="fAge" type="id" />
+    <item name="fGender" type="id" />
+    <item name="fRelation" type="id" />
+    <item name="fAddharNumber" type="id" />
+    <item name="auto_complete" type="id" />
+</resources>

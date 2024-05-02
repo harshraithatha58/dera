@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NewFormEntry">
+
+
+        <EditText
+            android:textColor="#333"
+            android:textColorHint="#FEFAE0"
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/searchInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+        <Button
+            android:theme="@style/Theme.MyApplication"
+            android:id="@+id/fetchPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="@+id/searchInput"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/searchInput"
+            app:layout_constraintTop_toBottomOf="@+id/searchInput" />
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/personalDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/personal_details"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/nameOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/name"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/personalDetails"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@+id/personalDetails"
+            app:layout_constraintTop_toBottomOf="@+id/personalDetails"
+            android:visibility="invisible"
+            android:animation="@anim/fade_in" /> <!-- Apply the fade-in animation -->
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/fathersNameOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/fatehrs_name"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/nameOutput"
+            app:layout_constraintStart_toStartOf="@+id/nameOutput"
+            app:layout_constraintTop_toBottomOf="@+id/nameOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/addressOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/address"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/fathersNameOutput"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="@+id/fathersNameOutput"
+            app:layout_constraintTop_toBottomOf="@+id/fathersNameOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/relegionOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/religion"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/addressOutput"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="@+id/addressOutput"
+            app:layout_constraintTop_toBottomOf="@+id/addressOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/maretialStatusOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/maretial_status_output"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/relegionOutput"
+            app:layout_constraintStart_toStartOf="@+id/relegionOutput"
+            app:layout_constraintTop_toBottomOf="@+id/relegionOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/mobileNumberOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/mobile_number"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/maretialStatusOutput"
+            app:layout_constraintStart_toStartOf="@+id/maretialStatusOutput"
+            app:layout_constraintTop_toBottomOf="@+id/maretialStatusOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/designationOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/designation"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/mobileNumberOutput"
+            app:layout_constraintStart_toStartOf="@+id/mobileNumberOutput"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumberOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/durationOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/duration"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/designationOutput"
+            app:layout_constraintStart_toStartOf="@+id/designationOutput"
+            app:layout_constraintTop_toBottomOf="@+id/designationOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/routeUsedOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/route_used_output"
+            android:textSize="22sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/durationOutput"
+            app:layout_constraintStart_toStartOf="@+id/durationOutput"
+            app:layout_constraintTop_toBottomOf="@+id/durationOutput" />
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/placeVisitedLastYearOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/place_visited_last_year_output"
+            android:textSize="22sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/routeUsedOutput"
+            app:layout_constraintStart_toStartOf="@+id/routeUsedOutput"
+            app:layout_constraintTop_toBottomOf="@+id/routeUsedOutput" />
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/familyDatails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/family_details_output"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/placeVisitedLastYearOutput"
+            app:layout_constraintStart_toStartOf="@+id/placeVisitedLastYearOutput"
+            app:layout_constraintTop_toBottomOf="@+id/placeVisitedLastYearOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/fNameOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/family_name_output"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/familyDatails"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/familyDatails"
+            app:layout_constraintTop_toBottomOf="@+id/familyDatails"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/ageOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/age_output"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/fNameOutput"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/fNameOutput"
+            app:layout_constraintTop_toBottomOf="@+id/fNameOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/genderOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/gender"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/ageOutput"
+            app:layout_constraintStart_toStartOf="@+id/ageOutput"
+            app:layout_constraintTop_toBottomOf="@+id/ageOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/relationOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/relation"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/genderOutput"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="@+id/genderOutput"
+            app:layout_constraintTop_toBottomOf="@+id/genderOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/addharNumberOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/addhar_number"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/relationOutput"
+            app:layout_constraintStart_toStartOf="@+id/relationOutput"
+            app:layout_constraintTop_toBottomOf="@+id/relationOutput"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:background="@drawable/container_background"
+            android:textColor="#f1d7b3"
+            android:id="@+id/familyMobileNumberOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/mobile_number_output"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/addharNumberOutput"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="@+id/addharNumberOutput"
+            app:layout_constraintTop_toBottomOf="@+id/addharNumberOutput"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:textColor="@color/white"
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintEnd_toEndOf="@+id/fetchPerson"
+            app:layout_constraintStart_toStartOf="@+id/fetchPerson"
+            app:layout_constraintTop_toBottomOf="@+id/fetchPerson"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars"
+            android:visibility="invisible"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
